@@ -1,0 +1,5 @@
+SELECT I.ANIMAL_ID, I.NAME from ANIMAL_INS as I
+join ANIMAL_OUTS as O
+where O.ANIMAL_ID = I.ANIMAL_ID
+order by (O.DATETIME - I.DATETIME) desc
+limit 2;
